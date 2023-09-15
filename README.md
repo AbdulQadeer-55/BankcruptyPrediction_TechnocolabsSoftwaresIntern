@@ -22,7 +22,7 @@ We performed: Data preprocessing, EDA, Feature Engineering, Modeling
 
 and Deployment.
 
-**Dataset Overview**
+# **Dataset Overview**
 
 At first, we were given five files of data, colleced from five different
 
@@ -36,7 +36,7 @@ status.
 
 (labeled as \*\*1\*\*) or \*\*Not Bankrupt\*\*(labeled as \*\*0\*\*) on that day.
 
-**Preprocessing and Sentiment Analysis**
+# **Preprocessing and Sentiment Analysis**
 
 At first, we converted the arff to csv file. We firstly worked on the data
 
@@ -56,9 +56,9 @@ sklearn.ensemble import IsolationForest.Finally, Saving the resulted
 
 dataframe as a csv file.
 
-**EDA**
+# **EDA**
 
-**\*\*Introduction:\*\***
+### **\*\*Introduction:\*\***
 
 At first, we merged the separate five files into one csv file.
 
@@ -90,7 +90,7 @@ We selected the features mentioned above and checked their correlation
 
 with target variable using heatmap
 
-**\*\*Information of Dataset:\*\***
+### **\*\*Information of Dataset:\*\***
 
 After the data was merged, it becomes **40768x65.**
 
@@ -104,7 +104,7 @@ features with the target variable
 
 Then we do the following visualizations on them:
 
-**\*\*Univariate Analysis:\*\***
+### **\*\*Univariate Analysis:\*\***
 
 Plotted
 
@@ -126,7 +126,7 @@ polarity variable are derived ones and other historical stock variables
 
 required to study more that how they are related to each other.
 
-**\*\*Bivariate Analysis:\*\***
+### **\*\*Bivariate Analysis:\*\***
 
 Plotted
 
@@ -134,7 +134,7 @@ Plotted
 
 2-pair plots on a random sample of the columns
 
-**\*\*Multi-variate Analysis:\*\***
+### **\*\*Multi-variate Analysis:\*\***
 
 1-Grouped Bar charts for a random sample of columns
 
@@ -150,7 +150,7 @@ standard deviation.
 
 Observed outliers in few categorical columns as well.
 
-**Preprocessing Again and Feature Engineering**
+# **Preprocessing Again and Feature Engineering**
 
 Now, after performing EDA, where the 5 datasets were concatenated, we
 
@@ -249,10 +249,7 @@ above that threshold. We chose to put a threshold of 0.005 and save the
 resulted columns in a new dataframe called selected\_data1.
 
 
-
-<a name="br4"></a> 
-
-**Model Building**
+# **Model Building**
 
 Metrics considered for Model Evaluation
 
@@ -282,7 +279,7 @@ that belong to a specific class or category, providing an indication of
 
 how well-represented that class is in the data.
 
-**Logistic Regression**
+## **Logistic Regression**
 
 \- Logistic Regression is a statistical method used in machine learning to
 
@@ -308,7 +305,8 @@ values of A and B.
 
 used:
 
-BFGS Solver (L-BFGS-B): Limited-memory Broyden-Fletcher-Goldfarb-Shanno
+### LBFGS Solver (L-BFGS-B):
+Limited-memory Broyden-Fletcher-Goldfarb-Shanno
 
 (L-BFGS-B) is an optimization algorithm that works well for logistic
 
@@ -316,7 +314,8 @@ regression with a large number of samples. It's efficient for multiclass
 
 problems and can handle L1 and L2 regularization.
 
-SAGA Solver: SAGA (Stochastic Average Gradient Descent) is an optimization
+### SAGA Solver: 
+SAGA (Stochastic Average Gradient Descent) is an optimization
 
 algorithm suitable for large datasets and is capable of handling both L1
 
@@ -324,13 +323,15 @@ and L2 regularization. It's particularly effective for solving large-scale
 
 logistic regression problems.
 
-LIBLINEAR Solver: LIBLINEAR is a linear solver designed for linear
+### LIBLINEAR Solver: 
+LIBLINEAR is a linear solver designed for linear
 
 classification and regression tasks. It's efficient for large datasets and
 
 is suitable for L1-regularized logistic regression.
 
-SAG Solver: SAG (Stochastic Average Gradient) is another optimization
+### SAG Solver: 
+SAG (Stochastic Average Gradient) is another optimization
 
 algorithm suitable for logistic regression. It's known for its efficiency
 
@@ -348,9 +349,7 @@ you find the most effective approach for your specific task.
 
 
 
-<a name="br5"></a> 
-
-**Naive Bayes Classifier**
+## **Naive Bayes Classifier**
 
 \- The Naive Bayes classifier is a probabilistic machine learning algorithm
 
@@ -378,7 +377,7 @@ email detection and sentiment analysis.
 
 problems.
 
-Confusion Matrix with Naive Bayes:
+### Confusion Matrix with Naive Bayes:
 
 \- A confusion matrix is a table used to evaluate a Naive Bayes
 
@@ -396,7 +395,7 @@ performance metrics.
 
 weaknesses, aiding in model improvement.
 
-**Regularized Logistic Regression L2- Norm**
+# **Regularized Logistic Regression L2- Norm**
 
 \- Regularized Logistic Regression with L2-norm (Ridge Regression) is a
 
@@ -424,7 +423,7 @@ loss and regularization term.
 
 \- Solver Algorithms in Regularized Logistic Regression:
 
-SAG (Stochastic Average Gradient) Solver:
+### SAG (Stochastic Average Gradient) Solver:
 
 SAG is an efficient optimization algorithm for large-scale logistic
 
@@ -436,43 +435,30 @@ datasets.
 
 SAG supports L2 regularization and is known for its speed.
 
-LIBLINEAR Solver:
+### LIBLINEAR Solver:
 
 LIBLINEAR is a linear solver used primarily for linear classification and
 
 regression.
-
-
-
-<a name="br6"></a> 
-
 It works well for both small and large datasets and supports L2-
 
-regularized logistic regression.
+regularized logistic regression.LIBLINEAR is efficient in terms of memory usage.
 
-LIBLINEAR is efficient in terms of memory usage.
-
-SAGA Solver:
+### SAGA Solver:
 
 SAGA is an extension of the SAG solver, designed for large-scale and high-
 
-dimensional logistic regression tasks.
+dimensional logistic regression tasks.It supports both L1 and L2 regularization, providing flexibility in
 
-It supports both L1 and L2 regularization, providing flexibility in
-
-feature selection.
-
-SAGA is particularly effective when dealing with a large number of samples
+feature selection.SAGA is particularly effective when dealing with a large number of samples
 
 or high-dimensional data.
 
-Newton-CG (Conjugate Gradient) Solver:
+### Newton-CG (Conjugate Gradient) Solver:
 
 Newton-CG is an optimization algorithm that approximates the Hessian
 
-matrix.
-
-\- It can handle both L1 and L2 regularization but may not be as efficient
+matrix.\- It can handle both L1 and L2 regularization but may not be as efficient
 
 as SAG for large datasets.
 
@@ -488,7 +474,7 @@ model's accuracy, precision, recall, and F1-score by comparing predicted
 
 and actual class labels.
 
-**Choosing the features**
+# **Choosing the features**
 
 After choosing Logistic Regression model based on confusion matrix here
 
@@ -516,27 +502,20 @@ it into numpy array. Applied logistic regression using 'sag' and trained
 
 the model. The model was giving accuracy around 95% and mse around 0.4.
 
-**Deployment**
+# **Deployment**
 
 you can access our app by following this link [http://ec2-51-20-9-234.eu-
 
 north-1.compute.amazonaws.com:8080/]
 
-\### Flask
+## Flask
 
 We also create our app by using flask , then deployed it to AWS . The
 
-files of this part are located into (Deployment\_task.7z) folder. You can
-
-access the app by following this link : [stock-price-application-
-
-flask](https://stock-price-flask.herokuapp.com/)
+files of this part are located into (Deployment\_task.7z) folder. 
 
 
-
-<a name="br7"></a> 
-
-\## Team Members
+### Team Members
 
 \* Habiba Yasser (Team lead)
 
@@ -554,7 +533,7 @@ flask](https://stock-price-flask.herokuapp.com/)
 
 \* Maliki Ayoub
 
-\## Instructor
+### Instructor
 
 Yasin Shah
 
