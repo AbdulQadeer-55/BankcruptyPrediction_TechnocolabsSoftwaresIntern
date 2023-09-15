@@ -517,6 +517,8 @@ files of this part are located into (Deployment\_task.7z) folder.
 
 \* Habiba Yasser (Team lead)
 
+\* Abdul Qadeer
+
 \* Sara Ashraf
 
 \* Abdulaziz Mustafa
