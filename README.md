@@ -504,9 +504,7 @@ the model. The model was giving accuracy around 95% and mse around 0.4.
 
 # **Deployment**
 
-you can access our app by following this link [http://ec2-51-20-9-234.eu-
-
-north-1.compute.amazonaws.com:8080/]
+you can access our app by following this link [http://ec2-51-20-9-234.eu-north-1.compute.amazonaws.com:8080/]
 
 ## Flask
 
